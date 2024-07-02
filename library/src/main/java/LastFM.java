@@ -3,7 +3,7 @@ import okhttp3.Request.Builder;
 
 import java.io.IOException;
 import com.google.gson.*;
-import java.util.*;;
+import java.util.*;
 
 public class LastFM {
     private static final String API_KEY = "092d316884d8385f35ad8b84f5f42ef8";
@@ -53,13 +53,13 @@ public class LastFM {
 
         return result; 
     } 
-    public static void main(String[] args) { LastFM apiClient = new LastFM();
-         String[][] topTracks = apiClient.getTopTracks(); 
+    public static void main(String[] args) { 
+        LastFM apiClient = new LastFM();
+        String[][] topTracks = apiClient.getTopTracks(); 
 
-         for (int i = 0; i <= topTracks[0].length; i++) {
+        for (int i = 0; i < topTracks[0].length; i++) {
             System.out.println(topTracks[0][i] + " by " + topTracks[1][i]);
-         }
+        }
 
-         
     }
 }
